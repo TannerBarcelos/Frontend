@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+#title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container {
+  width: 90vw; /* 90% of the width of the screen always*/
+  margin: 2rem auto;
+  margin-top: 2rem;
+  min-height: 100vh; /* min-height is the screen but as content in the page lengthens, so will the container*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.atom-item {
+  width: 350px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 2rem 1rem;
+  position: relative;
+  border-radius: 5px;
+  padding: 1rem;
+  line-height: 2rem;
+  box-shadow: 2px 3px 17px #5e5e5e;
+}
+
+.atom-item:hover {
+  transform: scale(1.01);
+  transition: 0.1s ease-out;
+}
+
+.atom-item h3 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 0.5rem;
+  width: 50%;
+}
+
+.atom-item small {
+  position: absolute;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(143, 104, 104);
+}
+
+.sorting-container {
+  width: 80%;
+  margin: 1rem auto 0 auto;
+  height: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sorting-container button {
+  height: 80%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  background-color: rgb(143, 104, 104);
+  color: #fff;
+}
+
+.sorting-container button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,203 @@
+/* Variables */
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Nav Styles */
+.nav__container {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  color: #fff;
+  background-color: rgb(70, 62, 62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container */
+.container_ {
+  margin: auto;
+  width: 50vw;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Submit Item container */
+.task__container {
+  margin: 8vh auto;
+  margin-bottom: 30px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.task__text {
+  padding: 1rem;
+  position: relative;
+}
+
+.list__content__box {
+  width: 100%;
+  /* to avoid the paragraph/content from overflowing the encasing div
+  use word-wrap: xyz   see mdn;*/
+  word-wrap: break-word;
+}
+
+.task__container input {
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.task__container input#priority__input {
+  width: 6.3rem;
+  text-align: center;
+}
+
+#task__input {
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+/* Actual list item style */
+.list__item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* Min-height of the div - if the text of the todo is too large for the div, the div will adjust its height 
+  past the min height...always try to use mins/maxes instead of stright height/width property*/
+  min-height: 6rem;
+  width: 50vw;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.list__item:nth-child(odd) {
+  background-color: #f1f3f8;
+}
+
+.list__item:nth-child(even) {
+  background-color: #d6e0f0;
+}
+
+/* List item hover effect - moves up -5px y*/
+.list__item:hover {
+  /* move the box up just slightly for a nice user experience and visual*/
+  transform: translate(0, -5px);
+  transition: 0.1s ease-in;
+}
+
+/* todo items render container */
+#list__todo-items {
+  margin: 1rem auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+/* Submit button style */
+#submit__task {
+  width: 6.3rem;
+  height: 3rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(15, 76, 117);
+  color: #fff;
+}
+
+.delete__task-btn {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ff7171;
+}
+.delete__task-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#submit__task:hover {
+  cursor: pointer;
+}
+
+.filterables {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.priority__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  /* Put in top right corner */
+  top: 0;
+  right: 0;
+  background-color: #0f4c75;
+  color: #fff;
+}
+
+/* Sorting btn styles */
+#sort__high,
+#sort__low {
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+#sort__high:hover,
+#sort__low:hover {
+  cursor: pointer;
+}
+
+#sort__high {
+  background-color: #8d93ab;
+  color: #fff;
+  font-weight: 100;
+}
+
+#sort__low {
+  background-color: #393b44;
+  color: #fff;
+  font-weight: 100;
+}
+
+.spin {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.trashbin {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 10px;
+  right: 20px;
+}
+
+.trashbin:hover {
+  cursor: pointer;
+}

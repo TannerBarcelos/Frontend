@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 30vh);
+  gap: 1rem;
+}
+
+.container > div {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+i {
+  font-size: 3rem;
+  color: rgba(152, 212, 223, 0.849);
+  margin-bottom: 2rem;
+}
+
+.el-1 {
+  background-color: rgba(0, 68, 255, 0.274);
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  /* Better - short hand for start and end*/
+  grid-column: span 2;
+  color: rgba(152, 212, 223, 0.849);
+}
+
+.el-2 {
+  background-color: rgba(0, 68, 255, 0.274);
+  color: rgba(152, 212, 223, 0.849);
+}
+
+.el-3 {
+  background-color: rgba(0, 68, 255, 0.274);
+  color: rgba(152, 212, 223, 0.849);
+}
+
+.el-4 {
+  background-color: rgba(0, 68, 255, 0.274);
+  grid-column: span 2;
+  color: rgba(152, 212, 223, 0.849);
+}
+
+.el-5 {
+  background-color: rgba(0, 68, 255, 0.274);
+  color: rgba(152, 212, 223, 0.849);
+}
+
+.el-6 {
+  background-color: rgba(0, 68, 255, 0.274);
+  color: rgba(152, 212, 223, 0.849);
+}
+
+.el-7 {
+  background-color: rgba(0, 68, 255, 0.274);
+  color: rgba(152, 212, 223, 0.849);
+}
+
+.topic:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease-in-out;
+}

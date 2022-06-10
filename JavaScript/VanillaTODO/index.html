@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!--bootstrap = this is an extra step for the tutorial-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!--font awesome-->
+    <script
+      src="https://kit.fontawesome.com/5883173e93.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>TODO List</title>
+  </head>
+  <body>
+    <!--HTML for the list and JS interation-->
+    <nav class="top__nav">
+      <ul class="nav__container">
+        <h1 class="title">TODO List</h1>
+      </ul>
+    </nav>
+    <div class="task__container">
+      <input
+        type="text"
+        name="task"
+        id="task__input"
+        placeholder="Enter a todo"
+      />
+      <label for="priority">Give this item a priority (1-5)</label>
+      <input
+        type="number"
+        value="1"
+        min="1"
+        max="5"
+        name="priority"
+        id="priority__input"
+      />
+      <button id="submit__task">Submit</button>
+    </div>
+    <div class="container_">
+      <!--add class of 'show' in JS to display filters only when list has AT LEAST 1 element-->
+      <div class="filterables">
+        <button id="sort__high">Sort high to low</button>
+        <button id="sort__low">Sort low to high</button>
+      </div>
+      <ul id="list__todo-items"></ul>
+    </div>
+    <i class="far fa-trash-alt trashbin"></i>
+    <!--JavaScript injection-->
+    <script src="./index.js"></script>
+    <!--Bootstrap JS-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

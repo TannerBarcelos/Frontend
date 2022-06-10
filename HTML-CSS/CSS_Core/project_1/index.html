@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uHost</title>
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- font awesome script-->
+    <script src="https://kit.fontawesome.com/5883173e93.js" crossorigin="anonymous"></script>
+
+    <!--google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <!--link our styles-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--this code below is a good scaffold to follow to actually build a mock online grocery shopping app in react! Follow along 
+and grind the CSS
+
+// we can get the images for the item from unsplash api using axios
+// can use state to handle cart total, changes to it, et
+//we can architect this whole thing and get it to production and use it on our portfolio
+
+//buttons to clear all items (which would reset cart total)
+// to add item which would invoke a search MODAL (Look up react modal with css ? if not, just 
+use a search bar compoennt like we had in the yotuube and image app)
+
+-->
+
+<body>
+    <main class="main-content">
+        <section id="section-top-land">
+            <!--we want a title to be specific so we gave it an id:id's only get used once-->
+            <h1 id="product-overview">Grocery Store
+                <i class="fas fa-cart-plus cartIcon"></i>
+            </h1>
+        </section>
+        <section>
+            <h1 class="section-title">Products</h1>
+            <div class="product-container">
+                <ul class="product-listings">
+                    <li class="list-item">
+                        <div id="item">
+                            <h4 class="item-title">Bananas
+                                <img class="prod-img" src="./banana.jpg" alt="i">
+                            </h4>
+                            <p class="description">Pitique Bananas</p>
+                            <p class="price">
+                                <i class="fas fa-dollar-sign"></i>
+                                2.99
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div id="item">
+                            <h4 class="item-title">Apples
+                                <img class="prod-img" src="./apple.jpg" alt="apple">
+                            </h4>
+                            <p class="description">Fuji Apples</p>
+                            <p class="price">
+                                <i class="fas fa-dollar-sign"></i>
+                                1.99
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div id="item">
+                            <h4 class="item-title">Pears
+                                <img class="prod-img" src="./pear.jpg" alt="pear">
+                            </h4>
+                            <p class="description">Albanian Squeeze Pairs</p>
+                            <p class="price">
+                                <i class="fas fa-dollar-sign"></i>
+                                4.99
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
+
+<!--
+    Notes:
+
+
+    <i class="fas fa-dollar-sign"></i>  icon is our dollar sign icon
+-->
