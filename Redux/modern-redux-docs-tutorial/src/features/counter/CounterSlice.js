@@ -32,6 +32,9 @@ const CounterSlice = createSlice({
       return initialState;
     },
   },
+  // Handle async actions [thunks] here (reducer : {} handles non-thunk based actions)
+  // Note = This can be redacted for RTKQuery which is the recomended approach
+  // extraReducers: (builder) => {},
 });
 
 export const { increment, decrement, incrementByValue, reset } =
