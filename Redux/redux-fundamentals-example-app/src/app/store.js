@@ -4,8 +4,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import { sayHi } from '../exampleAddons/enhancers';
 
 // Middleware - Runs on every set of dispatches. Can have side effects, see teh current action, etc. Think of it like Express MW
-import { logger } from '../exampleAddons/middleware';
+import { logger, timestampifyNewTodos } from '../exampleAddons/middleware';
 
+// Reducers / Slices
 import todoReducer from '../features/todos/todoSlice';
 import filterReducer from '../features/filters/filterSlice';
 
@@ -15,13 +16,13 @@ export const store = configureStore({
     todos: todoReducer,
     filters: filterReducer,
   },
-  middleware: [logger],
+  middleware: [logger, timestampifyNewTodos],
   enhancers: [sayHi],
 });
 
 // Example of how to manually dispatch an action object with type string and paylod
 // in RTK this changes as RTK creates the action creators for us with the right types and we just worry about passing in a payload
-store.dispatch({
-  type: 'todos/todoAdded',
-  payload: { text: 'test with old dispatch', completed: false, flag: 'red' },
-});
+// store.dispatch({
+//   type: 'todos/todoAdded',
+//   payload: { text: 'test with old dispatch', completed: false, flag: 'red' },
+// });
