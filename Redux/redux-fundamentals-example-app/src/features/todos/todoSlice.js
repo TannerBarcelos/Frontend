@@ -64,6 +64,9 @@ const todoSlice = createSlice({
   },
 });
 
+// Reducer function - makes component code cleaner and maintainable when state structure might shange, etc.
+// https://redux.js.org/tutorials/fundamentals/part-5-ui-react#reading-state-from-the-store-with-useselector
+// You can write this inside useSelect() but this is more maintainable
 export const todos = (state) => state.getState().todoList;
 
 export const {
