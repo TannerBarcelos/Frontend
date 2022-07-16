@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 // Enahncers - Enhance the way dispatch etc. works
-import { sayHi } from '../exampleAddons/enhancers';
+import { sayHi } from '../addons/enhancers';
 
 // Middleware - Runs on every set of dispatches. Can have side effects, see teh current action, etc. Think of it like Express MW
-import { logger, timestampifyNewTodos } from '../exampleAddons/middleware';
+import { logger, timestampifyNewTodos } from '../addons/middleware';
 
 // Reducers / Slices
 import todoReducer from '../features/todos/todoSlice';
