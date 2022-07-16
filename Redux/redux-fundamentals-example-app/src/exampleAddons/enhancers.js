@@ -1,28 +1,13 @@
-export const sayHiOnDispatch = (createStore) => {
+export const sayHi = (createStore) => {
   return (rootReducer, preloadedState, enhancers) => {
     const store = createStore(rootReducer, preloadedState, enhancers);
 
-    function newDispatch(action) {
+    function newDispatcher(action) {
       const result = store.dispatch(action);
-      console.log('Hi!');
+      console.log('hi');
       return result;
     }
 
-    return { ...store, dispatch: newDispatch };
-  };
-};
-
-export const includeMeaningOfLife = (createStore) => {
-  return (rootReducer, preloadedState, enhancers) => {
-    const store = createStore(rootReducer, preloadedState, enhancers);
-
-    function newGetState() {
-      return {
-        ...store.getState(),
-        meaningOfLife: 42,
-      };
-    }
-
-    return { ...store, getState: newGetState };
+    return { ...store, dispatch: newDispatcher };
   };
 };

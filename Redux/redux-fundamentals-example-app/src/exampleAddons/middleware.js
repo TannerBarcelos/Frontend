@@ -1,28 +1,8 @@
-export const sayHiOnDispatch = (createStore) => {
-  return (rootReducer, preloadedState, enhancers) => {
-    const store = createStore(rootReducer, preloadedState, enhancers);
-
-    function newDispatch(action) {
-      const result = store.dispatch(action);
-      console.log('Hi!');
-      return result;
-    }
-
-    return { ...store, dispatch: newDispatch };
+// Learn - https://redux.js.org/tutorials/fundamentals/part-4-store#:~:text=Redux%20middleware%20are%20written%20as%20a%20series%20of%20three%20nested%20functions
+export const logger = (storeAPI) => (next) => (action) => {
+  const logger = {
+    timestamp: Date.now(),
   };
-};
-
-export const includeMeaningOfLife = (createStore) => {
-  return (rootReducer, preloadedState, enhancers) => {
-    const store = createStore(rootReducer, preloadedState, enhancers);
-
-    function newGetState() {
-      return {
-        ...store.getState(),
-        meaningOfLife: 42,
-      };
-    }
-
-    return { ...store, getState: newGetState };
-  };
+  console.log(logger);
+  return next(action);
 };
